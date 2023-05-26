@@ -42,5 +42,13 @@ namespace HotelApi_BigBang.Controllers
         {
             return hotel.DeleteHotel(id);
         }
+        [HttpGet("/count")]
+        public async Task<ActionResult<int>> Count()
+        {
+            int count = hotel.Count();
+            return Ok(count);
+
+        }
+
     }
 }

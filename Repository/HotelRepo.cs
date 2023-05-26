@@ -43,5 +43,10 @@ namespace HotelApi_BigBang.Repository
             context.SaveChanges();
             return h;
         }
+
+        public int Count()
+        {
+            return context.Rooms.Count(room => room.RoomStatus == "Avail");
+        }
     }
 }
