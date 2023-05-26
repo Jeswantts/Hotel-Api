@@ -43,5 +43,10 @@ namespace HotelApi_BigBang.Repository
             context.SaveChanges();
             return r;
         }
+        public object GetAvailableRoomsByPriceRange(int maxPrice)
+        {
+            return context.Rooms.Where(room => room.RoomStatus == "Avail" && room.RoomPrice < maxPrice).ToList();
+
+        }
     }
 }

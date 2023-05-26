@@ -11,5 +11,7 @@ namespace HotelApi_BigBang.Repository
         public Hotel DeleteHotel(int id);
         public object Count(int id);
         public object RoomList();
+        public object GetHotelsByLocation(string location);
+
     }
 }

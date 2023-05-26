@@ -2,6 +2,7 @@
 using HotelApi_BigBang.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ModelLibrary.Models;
 
 namespace HotelApi_BigBang.Controllers
@@ -55,5 +56,12 @@ namespace HotelApi_BigBang.Controllers
             var result = hotel.RoomList();
             return Ok(result);
         }
+        [HttpGet("/filter/{location}")]
+        public ActionResult<object> GetHotelsByLocation(string location)
+        {
+            var hotels = hotel.GetHotelsByLocation(location.ToLower());
+            return Ok(hotels);
+        }
+
     }
 }

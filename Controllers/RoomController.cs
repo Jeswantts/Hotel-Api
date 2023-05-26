@@ -41,6 +41,12 @@ namespace HotelApi_BigBang.Controllers
         {
             return room.DeleteRoom(id);
         }
+        [HttpGet("Avail/{maxPrice}")]
+        public ActionResult<object> GetAvailableRoomsByHotelIdAndPriceRange(int maxPrice)
+        {
+            return room.GetAvailableRoomsByPriceRange(maxPrice);
+
+        }
     }
 }
 

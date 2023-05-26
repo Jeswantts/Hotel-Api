@@ -1,4 +1,5 @@
 ﻿using HotelApi_BigBang.Db;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ModelLibrary.Models;
 
@@ -57,5 +58,13 @@ namespace HotelApi_BigBang.Repository
             var result = new { Count = count + " Rooms and their details ;", Hotels = list };
             return result;
         }
+        public object GetHotelsByLocation(string location)
+        {
+            return context.Hotels.Where(hotel => hotel.HotelLocation.ToLower() == location).ToList();
+
+        }
+
+
+
     }
 }
