@@ -37,7 +37,8 @@ namespace HotelApi_BigBang.Controllers
                         new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                         new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                         new Claim("Username", user.UserName.ToString()),
+                        new Claim("Username", user.UserName.ToString()),
+                        new Claim("Email",user.Email.ToString()),
                         new Claim("Password",user.Password)
 
                     };
