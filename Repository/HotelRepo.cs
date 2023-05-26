@@ -15,6 +15,7 @@ namespace HotelApi_BigBang.Repository
 
         public Hotel DeleteHotel(int id)
         {
+
             Hotel hot = context.Hotels.FirstOrDefault(x => x.HotelId == id);
             context.Remove(hot);
             context.SaveChanges();

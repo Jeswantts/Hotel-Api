@@ -19,34 +19,82 @@ namespace HotelApi_BigBang.Controllers
         [HttpGet]
         public IEnumerable<Room> Get()
         {
-            return room.GetRooms();
+            try
+            {
+                return room.GetRooms();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Not able to get the details" + ex.Message);
+
+            }
+
         }
         [HttpGet("{id}")]
 
         public Room GetId(int id)
         {
-            return room.GetRoomById(id);
+            try
+            {
+                return room.GetRoomById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Not able to get the details" + ex.Message);
+
+            }
         }
 
         [HttpPost]
         public Room Post(Room r)
         {
-            return room.PostRoom(r);    
+            try
+            {
+                return room.PostRoom(r);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Not able to get the details" + ex.Message);
+
+            }
         }
         [HttpPut]
         public Room Put(int id, Room r)
         {
-            return room.PutRoom(id, r);
+            try
+            {
+                return room.PutRoom(id, r);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Not able to get the details" + ex.Message);
+
+            }
         }
         [HttpDelete]
         public Room Delete(int id)
         {
-            return room.DeleteRoom(id);
+            try
+            {
+                return room.DeleteRoom(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Not able to get the details" + ex.Message);
+
+            }
         }
         [HttpGet("Avail/{maxPrice}")]
         public ActionResult<object> GetAvailableRoomsByHotelIdAndPriceRange(int maxPrice)
         {
-            return room.GetAvailableRoomsByPriceRange(maxPrice);
+            try
+            {
+                return room.GetAvailableRoomsByPriceRange(maxPrice);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while retrieving the details: " + ex.Message);
+            }
 
         }
     }
