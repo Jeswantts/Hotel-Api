@@ -1,4 +1,5 @@
 ﻿using HotelApi_BigBang.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Models;
@@ -7,6 +8,7 @@ namespace HotelApi_BigBang.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RoomController : ControllerBase
     {
         private readonly IRoom room;
