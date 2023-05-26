@@ -1,0 +1,12 @@
+C:\Users\Suchitra\source\repos\ModelLibrary\bin\Debug\net6.0\ModelLibrary.deps.json
+C:\Users\Suchitra\source\repos\ModelLibrary\bin\Debug\net6.0\ModelLibrary.dll
+C:\Users\Suchitra\source\repos\ModelLibrary\bin\Debug\net6.0\ModelLibrary.pdb
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.csproj.AssemblyReference.cache
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.AssemblyInfoInputs.cache
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.AssemblyInfo.cs
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.dll
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\refint\ModelLibrary.dll
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ModelLibrary.pdb
+C:\Users\Suchitra\source\repos\ModelLibrary\obj\Debug\net6.0\ref\ModelLibrary.dll
