@@ -1,6 +1,5 @@
 # HotelApi_BigBangAssessment
 ASP .Net Core Web Api
-Preview attachment Hotels.pdf
+ 
+[embed]Hotels.pdf[/embed]
 
-Hotels.pdf
-122 KB
