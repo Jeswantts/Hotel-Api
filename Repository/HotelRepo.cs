@@ -27,7 +27,7 @@ namespace HotelApi_BigBang.Repository
 
         public IEnumerable<Hotel> GetHotels()
         {
-            return context.Hotels.ToList();
+            return context.Hotels.Include(x=>x.Rooms).ToList();
         }
 
         public Hotel PostHotel(Hotel h)
