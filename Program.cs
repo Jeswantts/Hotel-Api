@@ -1,4 +1,5 @@
 using HotelApi_BigBang.Db;
+using HotelApi_BigBang.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,7 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<XyzHotelContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("jeswant")));
-
+builder.Services.AddScoped<IHotel,HotelRepo>();
+builder.Services.AddScoped<IRoom,RoomRepo>();
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
