@@ -6,6 +6,7 @@ using ModelLibrary.Models;
 
 namespace HotelApi_BigBang.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class HotelController : ControllerBase
@@ -42,13 +43,17 @@ namespace HotelApi_BigBang.Controllers
         {
             return hotel.DeleteHotel(id);
         }
-        [HttpGet("/count")]
-        public async Task<ActionResult<int>> Count()
+        [HttpGet("/count/{id}")]
+        public ActionResult<object> Count(int id)
         {
-            int count = hotel.Count();
-            return Ok(count);
-
+            var result = hotel.Count(id);
+            return Ok(result);
         }
-
+        [HttpGet("/room/list")]
+        public ActionResult<object> CountList()
+        {
+            var result = hotel.RoomList();
+            return Ok(result);
+        }
     }
 }

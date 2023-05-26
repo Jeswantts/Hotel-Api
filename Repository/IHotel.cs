@@ -9,6 +9,7 @@ namespace HotelApi_BigBang.Repository
         public Hotel PostHotel(Hotel h);
         public Hotel PutHotel(int id, Hotel h);
         public Hotel DeleteHotel(int id);
-        public int Count();
+        public object Count(int id);
+        public object RoomList();
     }
 }

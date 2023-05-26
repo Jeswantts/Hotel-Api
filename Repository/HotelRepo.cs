@@ -44,9 +44,18 @@ namespace HotelApi_BigBang.Repository
             return h;
         }
 
-        public int Count()
+        public object Count(int id)
         {
-            return context.Rooms.Count(room => room.RoomStatus == "Avail");
+            int c = context.Rooms.Count(room => room.HotelId == id && room.RoomStatus == "Avail");
+            var result = new { Count = c + " Rooms available in " + id };
+            return result;
+        }
+        public object RoomList()
+        {
+            var list = context.Rooms.Select(a => new { a.Hotels.HotelName , a.RoomId }).ToList();
+            int count = context.Rooms.Count();
+            var result = new { Count = count + " Rooms and their details ;", Hotels = list };
+            return result;
         }
     }
 }
