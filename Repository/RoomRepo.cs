@@ -1,4 +1,5 @@
 ﻿using HotelApi_BigBang.Db;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using ModelLibrary.Models;
 
@@ -47,6 +48,10 @@ namespace HotelApi_BigBang.Repository
         {
             return context.Rooms.Where(room => room.RoomStatus == "Avail" && room.RoomPrice < maxPrice).ToList();
 
+        }
+        public object GetRoomsByType(string aminities)
+        {
+            return context.Rooms.Where(room => room.RoomClass.ToLower() == aminities).ToList();
         }
     }
 }

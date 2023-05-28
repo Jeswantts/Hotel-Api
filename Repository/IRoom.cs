@@ -10,5 +10,6 @@ namespace HotelApi_BigBang.Repository
         public Room PutRoom(int id, Room r);
         public Room DeleteRoom(int id);
         public object GetAvailableRoomsByPriceRange(int maxPrice);
+        public object GetRoomsByType(string aminities);
     }
 }

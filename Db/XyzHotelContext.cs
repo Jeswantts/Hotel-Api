@@ -7,6 +7,7 @@ namespace HotelApi_BigBang.Db
         public DbSet<Hotel>Hotels { get; set; }
         public DbSet<Room>Rooms { get; set; }
         public DbSet<User>Users { get; set; }
+        public DbSet<Admin> Admins { get; set; }
         public XyzHotelContext(DbContextOptions<XyzHotelContext> options) : base(options) { }
   
     }

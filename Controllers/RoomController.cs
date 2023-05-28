@@ -6,9 +6,9 @@ using ModelLibrary.Models;
 
 namespace HotelApi_BigBang.Controllers
 {
+    [Authorize(Roles = "Admin,User")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class RoomController : ControllerBase
     {
         private readonly IRoom room;
@@ -96,6 +96,19 @@ namespace HotelApi_BigBang.Controllers
                 return StatusCode(500, "An error occurred while retrieving the details: " + ex.Message);
             }
 
+        }
+        [HttpGet("/room/filter/{aminities}")]
+        public ActionResult<object> GetRoomsByType(string aminities)
+        {
+            try
+            {
+                var roo = room.GetRoomsByType(aminities.ToLower());
+                return Ok(roo);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while retrieving the details: " + ex.Message);
+            }
         }
     }
 }

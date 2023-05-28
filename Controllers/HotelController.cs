@@ -8,10 +8,9 @@ using ModelLibrary.Models;
 
 namespace HotelApi_BigBang.Controllers
 {
-
+    [Authorize(Roles ="Admin,User")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class HotelController : ControllerBase
     {
         private readonly IHotel hotel;
